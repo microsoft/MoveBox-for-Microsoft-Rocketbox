@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="EnsureAzureKinectPlatform" BeforeTargets="PrepareForBuild">
+    <Error Condition="'$(Platform)' != 'x64' AND '$(Platform)' != 'x86'" Text="Azure Kinect only supports the x86/x64 platform ('$(Platform)' not supported)" />
+  </Target>
+
+  <ItemGroup Condition="'$(Platform)' == 'x86'">
+    <Content Include="$(MSBuildThisFileDirectory)..\..\lib\native\x86\release\*.dll">
+        <Link>%(Filename)%(Extension)</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)..\..\lib\native\x86\release\*.pdb">
+        <Link>%(Filename)%(Extension)</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)' == 'x64'">
+    <Content Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll">
+        <Link>%(Filename)%(Extension)</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.pdb">
+        <Link>%(Filename)%(Extension)</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
