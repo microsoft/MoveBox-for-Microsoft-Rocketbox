@@ -8,9 +8,6 @@ https://privacy.microsoft.com/en-us/privacystatement
 ## Directions for getting started:
 
 
-### Download the desired Microsoft Rocketbox Avatars
-https://github.com/microsoft/Microsoft-Rocketbox
-
 
 ## Installation
 
@@ -124,9 +121,16 @@ From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/content
 - dnn_model_2_0.onnx
 
 
+### Download the desired Microsoft Rocketbox Avatars
+https://github.com/microsoft/Microsoft-Rocketbox
+
+
 
 ## RUN THE TOOLBOX
 Open the Unity Project and under Scenes/  select the MoveBox4MicrosoftRocketbox
+Introduce the Microsoft Rocketbox into the scene
+Attach the MoveBoxPlayback script if you are reproducing exising animation
+Or select the avatar parent in the MoveBox script on the MoveBox gameobject for realtime capturing and/or recording.
 
 
 Press play.
