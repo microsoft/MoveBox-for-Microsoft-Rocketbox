@@ -5,14 +5,16 @@ MoveBox is a toolbox to animate the Microsoft Rocketbox avatars using motion cap
 Microsoft Privacy Statement
 https://privacy.microsoft.com/en-us/privacystatement
 
-### Directions for getting started:
+## Directions for getting started:
 
 
-## Download the desired Microsoft Rocketbox Avatars
+### Download the desired Microsoft Rocketbox Avatars
 https://github.com/microsoft/Microsoft-Rocketbox
 
 
-## Install the Kinect V2 and/or Azure Kinect SDKs
+## Installation
+
+### Install SDKs for Kinect V2 and/or Azure Kinect
 Kinect V2
 https://developer.microsoft.com/en-us/windows/kinect/
 
@@ -28,7 +30,7 @@ https://docs.microsoft.com/en-us/azure/kinect-dk/sensor-sdk-download
 https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download
 
 
-FOR AZURE KINECT
+### FOR AZURE KINECT
 #### 1) First get the latest nuget packages of libraries:
 
 Open the MoveBox project in Unity.
@@ -123,7 +125,7 @@ From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/content
 
 
 
-RUN THE TOOLBOX
+## RUN THE TOOLBOX
 Open the Unity Project and under Scenes/  select the MoveBox4MicrosoftRocketbox
 
 
@@ -131,7 +133,7 @@ Press play.
 
 
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
