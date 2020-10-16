@@ -9,7 +9,7 @@ https://privacy.microsoft.com/en-us/privacystatement
 
 
 
-## Installation
+## Instructions for MoveBox_BodyTracking
 
 ### Install SDKs for Kinect V2 and/or Azure Kinect
 Kinect V2
@@ -30,8 +30,8 @@ https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download
 ### FOR AZURE KINECT
 #### 1) First get the latest nuget packages of libraries:
 
-Open the MoveBox project in Unity.
-Open the Visual Studio Solution associated with this project "MoveBox4Rocketbox.sln".
+Open the MoveBox_BodyTracking project in Unity.
+Open the Visual Studio Solution associated with this project "MoveBox_BodyTracking.sln".
 If there is no Visual Studio Solution yet you can make one by opening the Unity Editor
 and selecting one of the csharp files in the project and opening it for editing.
 You may also need to set the preferences->External Tools to Visual Studio
@@ -45,12 +45,12 @@ On the command line of the console at type the following command:
 Install-Package Microsoft.Azure.Kinect.BodyTracking -Version 1.0.1
 ```
 
-The body tracking libraries will be put in the Packages folder under MoveBox 
+The body tracking libraries will be put in the Packages folder under MoveBox_BodyTracking 
 
 
 #### 2) Next add these libraries to the Assets/Plugins folder:
 
-You can do this by hand or just run the batch file MoveLibraryFile.bat in the MoveBox  directory
+You can do this by hand or just run the batch file MoveLibraryFile.bat in the MoveBox_BodyTracking directory
 
 
 From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/lib/netstandard2.0
@@ -127,15 +127,20 @@ https://github.com/microsoft/Microsoft-Rocketbox
 
 
 ## RUN THE TOOLBOX
-Open the Unity Project and under Scenes/  select the MoveBox4MicrosoftRocketbox
-Introduce the Microsoft Rocketbox into the scene
+Open the Unity Project and under Assets\Microsoft Rocketbox MoveBox\Scenes select the MoveBox_BodyTracking
+Introduce the Microsoft Rocketbox avatar into the scene
 Attach the MoveBoxPlayback script if you are reproducing exising animation
 Or select the avatar parent in the MoveBox script on the MoveBox gameobject for realtime capturing and/or recording.
-
+On the inspector select whether you use a Kinect v2 or an Azure Kinect
 
 Press play.
 
+## Instructions for MoveBox_IKHandTracking
 
+MoveBox_IKHandTracking enables users of VR headsets to embody their rocketbox avatars and use their controllers to control the avatar motions in realtime from their HMD. We extrapolate the position of the upperbody (head and arms) based on the head and the hand-controllers positions and rotations. The demo also has finger tracking implemented for users of Oculus Quest.
+
+## Instructions for MoveBox_OfflineVideoTracking
+Using an external tool we can retrieve the skeletons from archival footage and convert them to animations for the rocketbox avatars.
 
 ## Contributing
 
