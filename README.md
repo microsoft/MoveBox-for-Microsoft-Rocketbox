@@ -12,9 +12,9 @@ The output of the model is a sequence of pose and shape parameters in the SMPL b
 Microsoft Privacy Statement
 https://privacy.microsoft.com/en-us/privacystatement
 
-## Directions for getting started:
-
+## Reference:
 We released this paper at IEEE AIVR together with the toolbox and gives more details of the features included:
+
 _Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_
 
 If you use this library for research or academic purposes, please also cite the aforementioned paper.
