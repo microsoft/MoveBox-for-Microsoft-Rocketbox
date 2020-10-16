@@ -174,10 +174,6 @@ Cheng Yao Wang - Cornell University
 ### IK and Hand Tracking
 Yaying Zhang - Microsoft
 
-If you use this library cite:
-
-_Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_
-
 
 ## Contributing
 
