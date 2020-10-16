@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Force-Enable-Microsoft-Azure-Kinect-BodyTracking)' == '' And (!$(PlatformToolset.StartsWith('v14')) Or '$(ApplicationType)' != '')">
+    <Disable-Microsoft-Azure-Kinect-BodyTracking>true</Disable-Microsoft-Azure-Kinect-BodyTracking>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Force-Disable-Microsoft-Azure-Kinect-BodyTracking)' != ''">
+    <Disable-Microsoft-Azure-Kinect-BodyTracking>true</Disable-Microsoft-Azure-Kinect-BodyTracking>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Disable-Microsoft-Azure-Kinect-BodyTracking)' == ''">
+    <Link>
+      <AdditionalDependencies Condition="'$(Configuration)' == 'Debug' And '$(Platform)' == 'x64'">$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)' == 'Release' And '$(Platform)' == 'x64'">$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug' And '$(Platform)' == 'x64' And '$(Disable-Microsoft-Azure-Kinect-BodyTracking)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release' And '$(Platform)' == 'x64' And '$(Disable-Microsoft-Azure-Kinect-BodyTracking)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\..\content\**\*.*">
+      <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

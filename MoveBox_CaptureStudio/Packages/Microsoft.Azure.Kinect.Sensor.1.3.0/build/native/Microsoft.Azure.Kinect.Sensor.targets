@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Force-Enable-Microsoft-Azure-Kinect-Sensor)' == '' And (!$(PlatformToolset.StartsWith('v14')) Or '$(ApplicationType)' != '')">
+    <Disable-Microsoft-Azure-Kinect-Sensor>true</Disable-Microsoft-Azure-Kinect-Sensor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Force-Disable-Microsoft-Azure-Kinect-Sensor)' != ''">
+    <Disable-Microsoft-Azure-Kinect-Sensor>true</Disable-Microsoft-Azure-Kinect-Sensor>
+  </PropertyGroup>
+  <Target Name="EnsureAzureKinectPlatform" BeforeTargets="PrepareForBuild" Condition="'$(Disable-Microsoft-Azure-Kinect-Sensor)' == ''">
+    <Error Condition="'$(Platform)' != 'x64' AND '$(Platform)' != 'Win32'" Text="Azure Kinect only supports the x86/x64 platform" />
+  </Target>
+  <ItemDefinitionGroup Condition="'$(Disable-Microsoft-Azure-Kinect-Sensor)' == ''">
+    <Link>
+      <AdditionalDependencies Condition="'$(Platform)' == 'x64'">$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Platform)' == 'Win32'">$(MSBuildThisFileDirectory)..\..\lib\native\x86\release\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(Platform)' == 'x64' And '$(Disable-Microsoft-Azure-Kinect-Sensor)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll" />
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.pdb" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)' == 'Win32' And '$(Disable-Microsoft-Azure-Kinect-Sensor)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\x86\release\*.dll" />
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\x86\release\*.pdb" />
+  </ItemGroup>
+</Project>

@@ -1,6 +1,0 @@
-{
-    "name": "Unity.Recorder",
-    "references": ["Unity.Timeline"],
-    "includePlatforms": [],
-    "excludePlatforms": []
-}

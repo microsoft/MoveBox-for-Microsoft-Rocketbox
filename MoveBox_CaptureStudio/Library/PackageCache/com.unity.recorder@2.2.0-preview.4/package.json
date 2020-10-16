@@ -1,0 +1,44 @@
+{
+  "name": "com.unity.recorder",
+  "displayName": "Unity Recorder",
+  "version": "2.2.0-preview.4",
+  "unity": "2018.3",
+  "unityRelease": "4f1",
+  "dependencies": {
+    "com.unity.timeline": "1.0.0"
+  },
+  "description": "Unity Recorder allows the recording of Animation clips, Videos and Images directly from the Unity Editor.",
+  "keywords": [
+    "unity",
+    "recorder",
+    "recording",
+    "capture",
+    "video",
+    "animation",
+    "clip",
+    "images"
+  ],
+  "repository": {
+    "footprint": "31bf4b6400f779bbdd42c58d24a552a6e46ccc3b",
+    "type": "git",
+    "url": "https://github.com/Unity-Technologies/com.unity.recorder.git",
+    "revision": "b97e1ca7c4f1fc85711e4f7f24ca74a8debdd1ac"
+  },
+  "samples": [
+    {
+      "displayName": "Screenshot Capture Sample",
+      "description": "This example shows how to setup a recording session via script.",
+      "path": "Samples~/CaptureScreenShot"
+    },
+    {
+      "displayName": "Multiple Recordings Sample",
+      "description": "This example shows how to setup a multiple recording session via script.",
+      "path": "Samples~/MultipleRecordings"
+    },
+    {
+      "displayName": "Recorder Editor Sample",
+      "description": "This example shows how to add \"Start Recording\" and \"Stop Recording\" menu items .",
+      "path": "Samples~/RecorderEditor"
+    }
+  ]
+}
