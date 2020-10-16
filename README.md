@@ -1,13 +1,23 @@
 # MoveBox for Microsoft Rocketbox
 
-MoveBox is a toolbox to animate the Microsoft Rocketbox avatars using motion captured (MoCap). Motion capture is performed using a single depth sensor, such as Azure Kinect or Windows Kinect V2. Our toolbox enables real-time animation of the user's avatar by converting the transformations between systems that have different joints and hierarchies. Additional features of the toolbox include recording, playback and looping animations, as well as basic audio lip sync, blinking and resizing of avatars. Our main contribution is both in the creation of this open source tool as well as the integration of MoveBox with Kinect V2 and Azure Kinect, as well as the interfacing with the Microsoft Rocketbox avatars.
+MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured (1) Body Tracking, (2) Inverse Kinematics or (3) Archival Footage. Each form of animation of the avatars is presented as a separate project.
+
+1- MoveBox_BodyTrackingFull. Motion capture (MoCap) is performed using a single depth sensor, such as Azure Kinect or Windows Kinect V2. Our toolbox enables real-time animation of the user's avatar by converting the transformations between systems that have different joints and hierarchies. Additional features of the toolbox include recording, playback and looping animations, as well as basic audio lip sync, blinking and resizing of avatars. Our main contribution is both in the creation of this open source tool as well as the integration of MoveBox with Kinect V2 and Azure Kinect, as well as the interfacing with the Microsoft Rocketbox avatars.
+
+2- MoveBox_IKHandTracking. Using an off the shelf HMD you can recover hand and head positions and rotations of the user and transfer them to a Microsoft Rocketbox Avatar of your choice. The hand tracking is used for an Inverse Kinematics (IK) solver that reconstructs a possible elbow position. Our demo project also includes finger tracking for the Oculus Quest.
+
+3- MoveBox_OfflineVideoTracking. Movebox includes an external tool for 3D multi-person human pose estimation from RGB videos. We utilized a deep-learning based approach open sourced as VIBE (https://github.com/mkocabas/VIBE), which trains a temporal model to predict the parameters of the SMPL body model for each frame while a motion discriminator tries to distinguish between real and regressed sequences. 
+The output of the model is a sequence of pose and shape parameters in the SMPL body model format (https://smpl.is.tue.mpg.de/). To animate Microsoft RocketBox avatars with predicted 3D poses, the toolbox first extracted the joints data from pose parameters, computed the transformation between SMPL and RocketBox skeleton structures, and then mapped to the corresponding joint in the Microsoft RocketBox avatar skeleton.
 
 Microsoft Privacy Statement
 https://privacy.microsoft.com/en-us/privacystatement
 
 ## Directions for getting started:
 
+We released this paper at IEEE AIVR together with the toolbox and gives more details of the features included:
+_Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_
 
+If you use this library for research or academic purposes, please also cite the aforementioned paper.
 
 ## Instructions for MoveBox_BodyTracking
 
@@ -141,6 +151,28 @@ MoveBox_IKHandTracking enables users of VR headsets to embody their rocketbox av
 
 ## Instructions for MoveBox_OfflineVideoTracking
 Using an external tool we can retrieve the skeletons from archival footage and convert them to animations for the rocketbox avatars.
+
+## Main Contributors
+Mar Gonzalez-Franco - Microsoft Research
+Eyal Ofek - Microsoft Research
+Angus Antley - Microsoft
+
+### Offline Video Tracking
+Andrea Stevenson Won - Cornell University
+Cheng Yao Wang - Cornell University
+
+### IK and Hand Tracking
+Yaying Zhang - Microsoft
+
+### Additional contributors
+Zelia Egan
+Mattew Peachey
+Payod Panda
+Tanmay Randhavane
+
+If you use this library cite:
+_Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_
+
 
 ## Contributing
 
