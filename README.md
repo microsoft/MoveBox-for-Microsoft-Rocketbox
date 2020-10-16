@@ -157,7 +157,14 @@ Mar Gonzalez-Franco - Microsoft Research
 
 Eyal Ofek - Microsoft Research
 
+### Kinect Sensing
 Angus Antley - Microsoft
+
+Tanmay Randhavane - Microsoft
+
+Zelia Egan - Microsoft
+
+Mattew Peachey - Dalhousie University
 
 ### Offline Video Tracking
 Andrea Stevenson Won - Cornell University
@@ -166,15 +173,6 @@ Cheng Yao Wang - Cornell University
 
 ### IK and Hand Tracking
 Yaying Zhang - Microsoft
-
-### Additional contributors
-Zelia Egan
-
-Mattew Peachey
-
-Payod Panda
-
-Tanmay Randhavane
 
 If you use this library cite:
 
