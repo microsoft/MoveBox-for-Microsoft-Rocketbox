@@ -60,3 +60,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+# FILES THAT ARE TOO BIG
+*cudnn64_7.dll
+*onnxruntime.dll
+*dnn_model_2_0.onnx
+
+*BodyTracking.1.0.1.nupkg
+*cuDNN.0.9.1.nupkg
+*Microsoft.Azure.Kinect.BodyTracking.1.0.1.nupkg
+*Microsoft.Azure.Kinect.BodyTracking.Dependencies.cuDNN.0.9.1.nupkg
