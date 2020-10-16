@@ -154,7 +154,7 @@ Mar Gonzalez-Franco - Microsoft Research
 
 Eyal Ofek - Microsoft Research
 
-### Kinect Sensing
+### Kinect Sensing and Capture Studio tools
 Angus Antley - Microsoft
 
 Tanmay Randhavane - Microsoft
