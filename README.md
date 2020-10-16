@@ -131,12 +131,8 @@ From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/content
 - dnn_model_2_0.onnx
 
 
-### Download the desired Microsoft Rocketbox Avatars
-https://github.com/microsoft/Microsoft-Rocketbox
 
-
-
-## RUN THE TOOLBOX
+### RUN THE TOOLBOX
 Open the Unity Project and under Assets\Microsoft Rocketbox MoveBox\Scenes select the MoveBox_BodyTracking
 Introduce the Microsoft Rocketbox avatar into the scene
 Attach the MoveBoxPlayback script if you are reproducing exising animation
