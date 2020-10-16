@@ -1,0 +1,14 @@
+{
+    "name": "Unity.Recorder.Editor.Tests",
+    "references": [
+        "Unity.Recorder.Editor",
+        "Unity.Recorder"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

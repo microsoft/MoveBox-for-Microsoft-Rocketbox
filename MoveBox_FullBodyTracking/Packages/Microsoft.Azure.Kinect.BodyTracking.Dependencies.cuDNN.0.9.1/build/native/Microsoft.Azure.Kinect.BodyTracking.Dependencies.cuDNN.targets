@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Force-Enable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN)' == '' And (!$(PlatformToolset.StartsWith('v14')) Or '$(ApplicationType)' != '')">
+    <Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN>true</Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Force-Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN)' != ''">
+    <Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN>true</Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug' And '$(Platform)' == 'x64' And '$(Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release' And '$(Platform)' == 'x64' And '$(Disable-Microsoft-Azure-Kinect-BodyTracking-Dependencies-cuDNN)' == ''">
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\lib\native\amd64\release\*.dll" />
+  </ItemGroup>
+</Project>

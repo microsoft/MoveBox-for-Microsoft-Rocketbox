@@ -1,0 +1,21 @@
+{
+    "name": "com.unity.multiplayer-hlapi.EditorTests",
+    "references": [
+        "com.unity.multiplayer-hlapi.Editor",
+        "com.unity.multiplayer-hlapi.Runtime",
+        "com.unity.multiplayer-hlapi.Tests"
+    ],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Mono.Cecil.dll"
+    ],
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
