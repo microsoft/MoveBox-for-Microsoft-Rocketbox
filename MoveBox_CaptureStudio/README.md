@@ -1,4 +1,4 @@
-# Sample Unity Body Tracking Application
+# Sample MoveBox Unity Capture Studio Application
 
 ### Directions for getting started:
 
