@@ -1,28 +1,28 @@
 # MoveBox for Microsoft Rocketbox
 
-MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways: (1) Body Tracking Capture Studio, (2) Inverse Kinematics or (3) Archival Footage. Each form of animation of the avatars is presented as a separate project.
+MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. Each form of avarat animation is presented as a separate project:
 
-### MoveBox Capture Studio
+### 1) MoveBox Capture Studio
 We created a Motion Capture (MoCap) studio using a single depth sensor, such as Azure Kinect or Windows Kinect V2. Our toolbox enables real-time animation of the user's avatar by converting the transformations between systems that have different joints and hierarchies. Additional features of the Captire Studio include recording, playback and looping animations, as well as basic audio lip sync, blinking and resizing of avatars. Our main contribution is both in the creation of this open source tool as well as the integration of MoveBox with Kinect V2 and Azure Kinect, as well as the interfacing with the Microsoft Rocketbox avatars.
 
-### MoveBox IK Hand Tracking
+### 2) MoveBox IK Hand Tracking
 Using an off the shelf HMD we recover realtime motions to create avatar embodiment. The hand and head positions and rotations of the user are transferred to a Microsoft Rocketbox Avatar of your choice. All in realtime. The hand tracking is used for an Inverse Kinematics (IK) solver (included) that reconstructs a possible elbow position. Our demo project also includes finger tracking for the Oculus Quest.
 
-### MoveBox Offline Video Tracking
+### 3) MoveBox Offline Video Tracking
 Movebox includes an external tool for 3D multi-person human pose estimation from RGB videos. We utilized a deep-learning based approach open sourced as VIBE (https://github.com/mkocabas/VIBE), which trains a temporal model to predict the parameters of the SMPL body model for each frame while a motion discriminator tries to distinguish between real and regressed sequences. 
 The output of the model is a sequence of pose and shape parameters in the SMPL body model format (https://smpl.is.tue.mpg.de/). To animate Microsoft RocketBox avatars with predicted 3D poses, the toolbox first extracted the joints data from pose parameters, computed the transformation between SMPL and RocketBox skeleton structures, and then mapped to the corresponding joint in the Microsoft RocketBox avatar skeleton.
 
-\*Note: Tools from the capture studio (MoveBox) can be imported to project 2 if there is a need to record the motions of the participant or user for later use.
+_Note: Tools from the capture studio (MoveBox) can be imported to project 2 if there is a need to record the motions of the participant or user for later use._
 
 Microsoft Privacy Statement
 https://privacy.microsoft.com/en-us/privacystatement
 
 ## Reference:
-We released this paper at IEEE AIVR together with the toolbox and gives more details of the features included:
+The following paper was published at IEEE AIVR 2020 to coincide with the release of this toolbox,and gives more details of the features included:
 
 _Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_
 
-If you use this library for research or academic purposes, please also cite the aforementioned paper.
+_If you use this library for research or academic purposes, please also cite the aforementioned paper._
 
 ## Instructions for MoveBox_CaptureStudio
 
