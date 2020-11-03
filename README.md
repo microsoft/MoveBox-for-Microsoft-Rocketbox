@@ -1,6 +1,6 @@
 # MoveBox for Microsoft Rocketbox
 
-MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. Each form of avarat animation is presented as a separate project:
+MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. Each form of avatar animation is presented as a separate project:
 
 ### 1) MoveBox Capture Studio
 We created a Motion Capture (MoCap) studio using a single depth sensor, such as Azure Kinect or Windows Kinect V2. Our toolbox enables real-time animation of the user's avatar by converting the transformations between systems that have different joints and hierarchies. Additional features of the Captire Studio include recording, playback and looping animations, as well as basic audio lip sync, blinking and resizing of avatars. Our main contribution is both in the creation of this open source tool as well as the integration of MoveBox with Kinect V2 and Azure Kinect, as well as the interfacing with the Microsoft Rocketbox avatars.
