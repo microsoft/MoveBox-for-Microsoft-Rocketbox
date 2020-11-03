@@ -46,13 +46,16 @@ https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download
 #### 1) First get the latest nuget packages of libraries:
 
 Open the MoveBox_CaptureStudio project in Unity.
-Open the Visual Studio Solution associated with this project "MoveBox_CaptureStudio.sln".
+
+Open the Visual Studio Solution associated with this project: `MoveBox_CaptureStudio.sln`.
+
 If there is no Visual Studio Solution yet you can make one by opening the Unity Editor
 and selecting one of the csharp files in the project and opening it for editing.
-You may also need to set the preferences->External Tools to Visual Studio
+
+You may also need to set the `preferences->External Tools` to Visual Studio
 
 In Visual Studio:
-Select Tools->NuGet Package Manager-> Package Manager Console
+Select `Tools->NuGet Package Manager-> Package Manager Console`
 
 On the command line of the console at type the following command:
 
@@ -65,7 +68,7 @@ The body tracking libraries will be put in the Packages folder under MoveBox_Cap
 
 #### 2) Next add these libraries to the Assets/Plugins folder:
 
-You can do this by hand or just run the batch file MoveLibraryFile.bat in the MoveBox_CaptureStudio directory
+You can do this by hand or just run the batch file `MoveLibraryFile.bat` in the `MoveBox_CaptureStudio` directory.
 
 
 From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/lib/netstandard2.0
@@ -83,6 +86,7 @@ From Packages/Microsoft.Azure.Kinect.Sensor.1.3.0/lib/netstandard2.0
 - Microsoft.Azure.Kinect.Sensor.pdb
 
 From Packages/Microsoft.Azure.Kinect.BodyTracking.Dependencies.0.9.1/lib/native/amd64/release
+
 - cublas64_100.dll
 - cudart64_100.dll
 - vcomp140.dll
@@ -114,8 +118,6 @@ From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/lib/native/amd64/release
 - k4abt.dll
 - onnxruntime.dll
 
-
-
 #### 2) Then add these libraries to the MoveBox project root directory that contains the Assets folder
 
 From Packages/Microsoft.Azure.Kinect.BodyTracking.Dependencies.cuDNN.0.9.1/lib/native/amd64/release
@@ -137,11 +139,13 @@ From Packages/Microsoft.Azure.Kinect.BodyTracking.1.0.1/content
 
 
 ### Run the Project
-Open the Unity Project and under Assets\Microsoft Rocketbox MoveBox\Scenes select the MoveBox_CaptureStudio
-Introduce the Microsoft Rocketbox avatar into the scene
-Attach the MoveBoxPlayback script if you are reproducing exising animation
-Or select the avatar parent in the MoveBox script on the MoveBox gameobject for realtime capturing and/or recording.
-On the inspector select whether you use a Kinect v2 or an Azure Kinect
+Open the Unity Project and under Assets\Microsoft Rocketbox MoveBox\Scenes select the MoveBox_CaptureStudio.
+
+Introduce the Microsoft Rocketbox avatar into the scene.
+
+Attach the MoveBoxPlayback script if you are reproducing exising animation or select the avatar parent in the MoveBox script on the MoveBox gameobject for realtime capturing and/or recording.
+
+On the inspector select whether you are using a Kinect v2 or an Azure Kinect.
 
 Press play.
 
