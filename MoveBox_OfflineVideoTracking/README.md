@@ -2,25 +2,34 @@
 
 ### Directions for getting started:
 
+This project uses the VIBE: Video Inference for Human Body Pose and Shape Estimation [CVPR-2020]
 
-#### 1) Install the VIBE system:
+> [**VIBE: Video Inference for Human Body Pose and Shape Estimation**](https://arxiv.org/abs/1912.05656),            
+> [Muhammed Kocabas](https://ps.is.tuebingen.mpg.de/person/mkocabas), [Nikos Athanasiou](https://ps.is.tuebingen.mpg.de/person/nathanasiou), 
+[Michael J. Black](https://ps.is.tuebingen.mpg.de/person/black),        
+> *IEEE Computer Vision and Pattern Recognition, 2020* 
+Watch [this video](https://www.youtube.com/watch?v=fW0sIZfQcIs) for more qualitative results.
 
-1. Install Anaconda
-2. Create a virtual environment with python 3.7 version (e.g.  conda create -n MoveBox_Test1 python=3.7)
-conda activate MoveBox_Test1
 
-3. Open the VIBE folder downloaded from this github project
-4. Run the batch file for installation ( .\install_windows.bat) 
+# LICENSE NOTE:
+VIBE needs to be downloaded from 
+```bash
+git clone https://github.com/mkocabas/VIBE.git
+```
+VIBE has a License agreement only for research uses. Please look at the original license before using it.
 
-After the above steps, the VIBE and all required models and libraries should be installed correctly on your own PC. If we want to estimate 3D pose from RGB video, then we just need to run the demo_windows,py file
-5. python demo_windows.py --vid_file sample_video.mp4 --output_folder output/
+# SMLP for Microsoft Rocketbox
 
-There are only 2 parameters that need to be specified:
-  --vid_file :  input video path
-  --output_folder : output folder to write results  
 
-Every video will generate its own result folder (e.g. output/sample_video1/, output/sample_video2/) and the joint CSV files will be stored in it.
+#### 1) Use the VIBE system:
 
+1. Run your video throught VIBE
+
+2. Use the 3DPoseToCSV.py file to convert the output pkl to csv
+
+```bash
+python 3DPoseToCSV.py --vibe_output ./vibe_output.pkl --output_folder ./
+```
 
 
 #### 2) Import the offline 3D pose data to the Unity project at MoveBox_OfflineVideo
@@ -29,3 +38,4 @@ Every video will generate its own result folder (e.g. output/sample_video1/, out
 2. Attach the LoadPose script to the avatar (you can use whatever avatar of your choice) game object
 3. Copy the pose csv file name to the Pose File property in the LoadPose script 
 4. Play and press P to start animating the avatar
+
