@@ -1,12 +1,10 @@
 This project uses the VIBE: Video Inference for Human Body Pose and Shape Estimation [CVPR-2020]
 
-[![report](https://img.shields.io/badge/arxiv-report-red)](https://arxiv.org/abs/1912.05656) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dFfwxZ52MN86FA6uFNypMEdFShd2euQA) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/vibe-video-inference-for-human-body-pose-and/3d-human-pose-estimation-on-3dpw)](https://paperswithcode.com/sota/3d-human-pose-estimation-on-3dpw?p=vibe-video-inference-for-human-body-pose-and)
-Watch [this video](https://www.youtube.com/watch?v=fW0sIZfQcIs) for more qualitative results.
-
 > [**VIBE: Video Inference for Human Body Pose and Shape Estimation**](https://arxiv.org/abs/1912.05656),            
 > [Muhammed Kocabas](https://ps.is.tuebingen.mpg.de/person/mkocabas), [Nikos Athanasiou](https://ps.is.tuebingen.mpg.de/person/nathanasiou), 
 [Michael J. Black](https://ps.is.tuebingen.mpg.de/person/black),        
 > *IEEE Computer Vision and Pattern Recognition, 2020* 
+Watch [this video](https://www.youtube.com/watch?v=fW0sIZfQcIs) for more qualitative results.
 
 
 # LICENSE NOTE:
