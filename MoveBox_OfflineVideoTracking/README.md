@@ -25,7 +25,7 @@ VIBE has a License agreement only for research uses. Please look at the original
 
 1. Run your video throught VIBE
 
-2. Use the 3DPoseToCSV.py file to convert the output pkl to csv
+2. Use the 3DPoseToCSV.py file to convert the output pkl to csv. We have attached an example file for demo purposes.
 
 ```bash
 python 3DPoseToCSV.py --vibe_output ./vibe_output.pkl --output_folder ./
