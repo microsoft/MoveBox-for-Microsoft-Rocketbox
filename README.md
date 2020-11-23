@@ -12,7 +12,8 @@ Using an off the shelf HMD we recover realtime motions to create avatar embodime
 
 ### 3) MoveBox Offline Video Tracking
 
- Movebox can parser the SMLP body models extracted by an external tool for 3D multi-person human pose estimation from RGB videos. We utilized a deep-learning based approach open sourced as VIBE (https://github.com/mkocabas/VIBE), which trains a temporal model to predict the parameters of the SMPL body model for each frame while a motion discriminator tries to distinguish between real and regressed sequences. **NOTE: the VIBE repo has a research only license and you should check if your project can use it (https://github.com/mkocabas/VIBE/blob/master/LICENSE)**
+ Movebox can parser the SMPL
+ body models extracted by an external tool for 3D multi-person human pose estimation from RGB videos. We utilized a deep-learning based approach open sourced as VIBE (https://github.com/mkocabas/VIBE), which trains a temporal model to predict the parameters of the SMPL body model for each frame while a motion discriminator tries to distinguish between real and regressed sequences. **NOTE: the VIBE repo has a research only license and you should check if your project can use it (https://github.com/mkocabas/VIBE/blob/master/LICENSE)**
 The output of the model is a sequence of pose and shape parameters in the SMPL body model format (https://smpl.is.tue.mpg.de/). To animate Microsoft RocketBox avatars with predicted 3D poses, the toolbox first extracted the joints data from pose parameters, computed the transformation between SMPL and RocketBox skeleton structures, and then mapped to the corresponding joint in the Microsoft RocketBox avatar skeleton.
 
 _Note: Tools from the capture studio (MoveBox) can be imported to project 2 if there is a need to record the motions of the participant or user for later use._
