@@ -18,7 +18,7 @@ git clone https://github.com/mkocabas/VIBE.git
 ```
 VIBE has a License agreement only for research uses. Please look at the original license before using it.
 
-# SMLP for Microsoft Rocketbox
+# SMPL for Microsoft Rocketbox
 
 
 #### 1) Use the VIBE system:
