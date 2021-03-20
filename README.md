@@ -1,13 +1,14 @@
 # MoveBox for Microsoft Rocketbox
 
-MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. 
+MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. Each form of avatar animation is presented as a separate project: a capture studio, an IK and Hand tracking tool for realtime use, and an offline video tracking plugin.
+
 Watch the presentation of the tool at IEEE AIVR:
 
 [![Presentation at IEEE AIVR](https://img.youtube.com/vi/7CEYObKjsEI/0.jpg)](http://www.youtube.com/watch?v=7CEYObKjsEI)
 
 _Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhavane, Payod Panda, Yaying Zhang,  Cheng Yao Wang, Derek F. Reilly, Tabitha C Peck, Andrea Stevenson Won, Anthony Steed and Eyal Ofek (2020) "**MoveBox: Democratizing MoCap for the Microsoft Rocketbox Avatar Library**". IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)_ [Paper](https://www.microsoft.com/en-us/research/publication/movebox-democratizing-mocap-for-the-microsoft-rocketbox-avatar-library/)
 
-Each form of avatar animation is presented as a separate project:
+
 
 ### 1) MoveBox Capture Studio
 
