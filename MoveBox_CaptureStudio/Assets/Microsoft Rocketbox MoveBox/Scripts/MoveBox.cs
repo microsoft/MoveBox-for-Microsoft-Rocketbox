@@ -178,7 +178,8 @@ public class MoveBox : MonoBehaviour
         gameObject.AddComponent<ConfigLoader>();
         KinectDevice = gameObject.AddComponent<TrackerHandler>();
         KinectDevice.isKinect2 = isKinect2;
-        KinectDevice.drawSkeletons = DrawSkeleton;
+        KinectDevice.turnOnOffSkeletons(!DrawSkeleton);
+        KinectDevice.turnOnOffSkeletons(DrawSkeleton);
         dp = gameObject.AddComponent<DataProvider>();
         if (isRealTime)
         {
@@ -339,7 +340,10 @@ public class MoveBox : MonoBehaviour
         
         }
 
-     
+        
+        KinectDevice.turnOnOffSkeletons(DrawSkeleton);
+
+
 
         if (!configured || !isRealTime || !animationOn)
             return;

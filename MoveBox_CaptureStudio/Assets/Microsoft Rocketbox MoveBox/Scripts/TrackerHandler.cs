@@ -258,9 +258,12 @@ public class TrackerHandler : MonoBehaviour
         return closestBody;
     }
 
-    public void turnOnOffSkeletons()
+    public void turnOnOffSkeletons(bool state)
     {
-        drawSkeletons = !drawSkeletons;
+
+        if (drawSkeletons == state) return;
+        drawSkeletons = state;
+        
         const int bodyRenderedNum = 0;
         for (int jointNum = 0; jointNum < (int)Microsoft.Azure.Kinect.BodyTracking.JointId.Count; jointNum++)
         {
