@@ -4,7 +4,7 @@ using UnityEngine;
 using Microsoft.Azure.Kinect.BodyTracking;
 using System;
 using UnityEngine.SocialPlatforms;
-using System.Runtime.Remoting.Messaging;
+//using System.Runtime.Remoting.Messaging;
 using Unity.Collections;
 
 public class KinectMoCapRocketboxAvatar : MonoBehaviour
