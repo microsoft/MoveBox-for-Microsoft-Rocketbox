@@ -1,4 +1,4 @@
-# MoveBox for Microsoft Rocketbox
+MoveBox for Microsoft Rocketbox
 
 MoveBox is a toolbox to animate the Microsoft Rocketbox avatars (https://github.com/microsoft/Microsoft-Rocketbox) using motion captured in three different ways. Each form of avatar animation is presented as a separate project: a capture studio, an IK and Hand tracking tool for realtime use, and an offline video tracking plugin.
 
@@ -10,15 +10,15 @@ _Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhava
 
 
 
-### 1) MoveBox Capture Studio
+1) MoveBox Capture Studio
 
  We created a Motion Capture (MoCap) studio using a single depth sensor, such as Azure Kinect or Windows Kinect V2. Our toolbox enables real-time animation of the user's avatar by converting the transformations between systems that have different joints and hierarchies. Additional features of the Captire Studio include recording, playback and looping animations, as well as basic audio lip sync, blinking and resizing of avatars. Our main contribution is both in the creation of this open source tool as well as the integration of MoveBox with Kinect V2 and Azure Kinect, as well as the interfacing with the Microsoft Rocketbox avatars.
 
-### 2) MoveBox IK Hand Tracking
+2) MoveBox IK Hand Tracking
 
 Using an off the shelf HMD we recover realtime motions to create avatar embodiment. The hand and head positions and rotations of the user are transferred to a Microsoft Rocketbox Avatar of your choice. All in realtime. The hand tracking is used for an Inverse Kinematics (IK) solver (included) that reconstructs a possible elbow position. Our demo project also includes finger tracking for the Oculus Quest.
 
-### 3) MoveBox Offline Video Tracking
+3) MoveBox Offline Video Tracking
 
  Movebox can parser the SMPL
  body models extracted by an external tool for 3D multi-person human pose estimation from RGB videos. We utilized a deep-learning based approach open sourced as VIBE (https://github.com/mkocabas/VIBE), which trains a temporal model to predict the parameters of the SMPL body model for each frame while a motion discriminator tries to distinguish between real and regressed sequences. **NOTE: the VIBE repo has a research only license and you should check if your project can use it (https://github.com/mkocabas/VIBE/blob/master/LICENSE)**
@@ -29,7 +29,7 @@ _Note: Tools from the capture studio (MoveBox) can be imported to project 2 if t
 Microsoft Privacy Statement
 https://privacy.microsoft.com/en-us/privacystatement
 
-## Reference:
+Reference:
 The following paper was published at IEEE AIVR 2020 to coincide with the release of this toolbox,and gives more details of the features included:
 
 
@@ -38,9 +38,9 @@ _Mar Gonzalez-Franco, Zelia Egan, Matthew Peachey, Angus Antley, Tanmay Randhava
 _If you use this library for research or academic purposes, please also cite the aforementioned paper._
 
 
-## Instructions for MoveBox_CaptureStudio
+Instructions for MoveBox_CaptureStudio
 
-### Install SDKs for Kinect V2 and/or Azure Kinect
+Install SDKs for Kinect V2 and/or Azure Kinect
 Kinect V2
 https://developer.microsoft.com/en-us/windows/kinect/
 
@@ -56,8 +56,8 @@ https://docs.microsoft.com/en-us/azure/kinect-dk/sensor-sdk-download
 https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download
 
 
-### FOR AZURE KINECT
-#### 1) First get the latest nuget packages of libraries:
+FOR AZURE KINECT
+1) First get the latest nuget packages of libraries:
 
 Open the MoveBox_CaptureStudio project in Unity.
 Open the Visual Studio Solution associated with this project "MoveBox_CaptureStudio.sln".
